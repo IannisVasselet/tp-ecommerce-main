@@ -93,7 +93,7 @@ sequenceDiagram
 
 1. **Cloner le repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/IannisVasselet/tp-ecommerce-main.git
    cd tp-ecommerce-main
    ```
 
