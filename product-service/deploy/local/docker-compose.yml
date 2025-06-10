@@ -18,7 +18,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
-      - "8765:5432"
+      - "8764:5432"
     networks:
       - net
 

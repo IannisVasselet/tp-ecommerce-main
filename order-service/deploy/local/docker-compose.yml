@@ -4,7 +4,7 @@ networks:
 
 services:
   # Postgres database
-  database:
+  order-database:
     restart: "no"
     image: postgres:16-alpine
     healthcheck:
@@ -27,7 +27,7 @@ services:
     image: docker.io/cgayet/order-service:0.0.1
     environment:
       - NODE_ENV=development
-      - DATABASE_HOST=database
+      - DATABASE_HOST=order-database
       - DATABASE_USERNAME=postgres
       - DATABASE_PASSWORD=postgres
       - DATABASE_NAME=order
@@ -37,5 +37,5 @@ services:
     networks:
       - net
     depends_on:
-      database:
+      order-database:
         condition: service_healthy
