@@ -1,0 +1,530 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-06-10T16:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_0001",
+      "parentId": "fld_product_service",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_product }}/products",
+      "name": "Get All Products",
+      "description": "Récupère la liste de tous les produits disponibles",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686412800000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0002",
+      "parentId": "fld_product_service",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_product }}/products/{{ _.product_id }}",
+      "name": "Get Product by ID",
+      "description": "Récupère un produit spécifique par son ID",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686412700000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0003",
+      "parentId": "fld_cart_service",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_cart }}/cart/{{ _.user_id }}/items",
+      "name": "Add Item to Cart",
+      "description": "Ajoute un produit au panier d'un utilisateur",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"productId\": \"{{ _.product_id }}\",\n  \"quantity\": 2\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686412600000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0004",
+      "parentId": "fld_cart_service",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_cart }}/cart/{{ _.user_id }}",
+      "name": "Get User Cart",
+      "description": "Récupère le contenu du panier d'un utilisateur",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686412500000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0005",
+      "parentId": "fld_cart_service",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_cart }}/cart/{{ _.user_id }}/items/{{ _.product_id }}",
+      "name": "Remove Item from Cart",
+      "description": "Supprime un produit spécifique du panier",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686412400000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0006",
+      "parentId": "fld_cart_service",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_cart }}/cart/{{ _.user_id }}",
+      "name": "Clear User Cart",
+      "description": "Vide complètement le panier d'un utilisateur",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686412300000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0007",
+      "parentId": "fld_order_service",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_order }}/orders",
+      "name": "Create Order from Cart",
+      "description": "Créer une commande à partir du panier de l'utilisateur",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"userId\": \"{{ _.user_id }}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686412200000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0008",
+      "parentId": "fld_order_service",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_order }}/orders/{{ _.user_id }}",
+      "name": "Get User Orders",
+      "description": "Récupère toutes les commandes d'un utilisateur",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686412100000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0009",
+      "parentId": "fld_order_service",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_order }}/orders/order/{{ _.order_id }}",
+      "name": "Get Order Details",
+      "description": "Récupère les détails d'une commande spécifique",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686412000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0010",
+      "parentId": "fld_workflow_tests",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_cart }}/cart/user-test-123/items",
+      "name": "E2E: Add iPhone to Cart",
+      "description": "Test E2E: Ajouter un iPhone au panier",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"productId\": \"PUT_IPHONE_ID_HERE\",\n  \"quantity\": 2\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686411900000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0011",
+      "parentId": "fld_workflow_tests",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_cart }}/cart/user-test-123/items",
+      "name": "E2E: Add Samsung to Cart",
+      "description": "Test E2E: Ajouter un Samsung au panier",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"productId\": \"PUT_SAMSUNG_ID_HERE\",\n  \"quantity\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686411800000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0012",
+      "parentId": "fld_workflow_tests",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_cart }}/cart/user-test-123",
+      "name": "E2E: Check Cart Contents",
+      "description": "Test E2E: Vérifier le contenu du panier",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686411700000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0013",
+      "parentId": "fld_workflow_tests",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_order }}/orders",
+      "name": "E2E: Create Order",
+      "description": "Test E2E: Créer une commande à partir du panier",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"userId\": \"user-test-123\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686411600000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0014",
+      "parentId": "fld_workflow_tests",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_order }}/orders/user-test-123",
+      "name": "E2E: Check User Orders",
+      "description": "Test E2E: Vérifier les commandes de l'utilisateur",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686411500000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0015",
+      "parentId": "fld_workflow_tests",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "url": "{{ _.base_url_cart }}/cart/user-test-123",
+      "name": "E2E: Verify Cart is Empty",
+      "description": "Test E2E: Vérifier que le panier est vide après commande",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1686411400000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_product_service",
+      "parentId": "wrk_minishop",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "name": "📦 Product Service",
+      "description": "API endpoints pour le service de gestion des produits",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1686412800000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_cart_service",
+      "parentId": "wrk_minishop",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "name": "🛒 Cart Service",
+      "description": "API endpoints pour le service de gestion des paniers",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1686412700000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_order_service",
+      "parentId": "wrk_minishop",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "name": "📋 Order Service",
+      "description": "API endpoints pour le service de gestion des commandes",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1686412600000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_workflow_tests",
+      "parentId": "wrk_minishop",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "name": "🎯 E2E Workflow Tests",
+      "description": "Tests de workflow complet end-to-end",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1686412500000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_minishop",
+      "parentId": null,
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "name": "MiniShop Microservices",
+      "description": "Collection de tests pour l'architecture microservices MiniShop\n\n## 🏗️ Architecture\n- **Product Service**: Port 3000 - Gestion des produits\n- **Cart Service**: Port 3002 - Gestion des paniers\n- **Order Service**: Port 3003 - Gestion des commandes\n\n## 🎯 Workflow E2E\n1. Récupérer les produits disponibles\n2. Ajouter des produits au panier\n3. Vérifier le contenu du panier\n4. Créer une commande\n5. Vérifier la commande créée\n6. Vérifier que le panier est vidé",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_base",
+      "parentId": "wrk_minishop",
+      "modified": 1686412800000,
+      "created": 1686412800000,
+      "name": "Base Environment",
+      "data": {
+        "base_url_product": "http://localhost:3000",
+        "base_url_cart": "http://localhost:3002", 
+        "base_url_order": "http://localhost:3003",
+        "user_id": "user-test-123",
+        "product_id": "REPLACE_WITH_ACTUAL_PRODUCT_ID",
+        "order_id": "REPLACE_WITH_ACTUAL_ORDER_ID"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url_product",
+          "base_url_cart", 
+          "base_url_order",
+          "user_id",
+          "product_id",
+          "order_id"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1686412800000,
+      "_type": "environment"
+    }
+  ]
+}
